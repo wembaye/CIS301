@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Applied Scripture</title>
+    <script type="text/javascript">
+
+        function addressName() {
+
+            var name = document.getElementById('nameInputBox').value;
+            var street = document.getElementById('streetAddress').value;
+            var city = document.getElementById('cityAddress').value;
+            var state = document.getElementById('stateAddress').value;
+            var zipcode = document.getElementById('zipAddress').value;
+
+            var fulladdress = name + '\n' + street + '\n' + city + "," +" "  + state + " " + zipcode;
+
+            document.getElementById('outputDiv').innerText = fulladdress;
+        }
+    </script>
+</head>
+
+<body>
+    Name <input type="text" id="nameInputBox">
+    Street <input type="text" id="streetAddress"><br>
+    City<input type="text" id="cityAddress">
+    State<input type="text" id="stateAddress">
+    Zip Code <input type="text" id="zipAddress"><br>
+
+
+    <button type="button" onclick="addressName()">Make Address</button>
+    <div id="outputDiv"> </div>
+</body>
+
+</html>
